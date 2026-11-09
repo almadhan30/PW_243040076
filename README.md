@@ -1,16 +1,18 @@
-# React + Vite
+# Praktikum Web — 243040076
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repository ini berisi tugas praktikum web yang dipisahkan per folder:
 
-Currently, two official plugins are available:
+- [`Tugas01/`](./Tugas01/) — proyek tugas pertama.
+- [`Tugas02/`](./Tugas02/) — Catatan Keuangan Mini.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Menjalankan proyek
 
-## React Compiler
+Setiap tugas adalah proyek Vite yang berdiri sendiri. Masuk ke folder tugas yang ingin dijalankan, lalu instal dependensi dan mulai server:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```powershell
+cd Tugas01
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Untuk tugas kedua, gunakan folder `Tugas02` sebagai gantinya.

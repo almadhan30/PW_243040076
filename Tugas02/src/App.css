@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #172b3a;
+  background: #f5f8f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(196, 232, 213, 0.3), transparent 34rem),
+    #f5f8f6;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.wadah {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 48px 0 64px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #d5e9dd;
+  border-radius: 17px;
+  background: #e7f4ec;
+  color: #16845a;
+  font-family: 'Manrope', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.label-atas {
+  margin: 0 0 5px;
+  color: #43856a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+h1,
+.kartu h2 {
+  font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+  margin: 0;
+  color: #172b3a;
+  font-size: clamp(25px, 3vw, 32px);
+  font-weight: 800;
+  letter-spacing: -1.1px;
+}
+
+.subjudul {
+  margin: 5px 0 0;
+  color: #718078;
+  font-size: 14px;
+}
+
+.kartu {
+  min-width: 0;
+  padding: 25px;
+  border: 1px solid #e6ece8;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 30px rgba(26, 59, 43, 0.045);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.kartu:not(.kartu-saldo):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(26, 59, 43, 0.08);
+}
+
+.kartu h2 {
+  margin: 0;
+  color: #20372d;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.35px;
+}
+
+.kartu-saldo {
+  position: relative;
+  display: flex;
+  min-height: 220px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  overflow: hidden;
+  margin-bottom: 22px;
+  padding: 32px 38px;
+  border: 0;
+  background: linear-gradient(118deg, #123f34 0%, #17664d 56%, #20805c 100%);
+  box-shadow: 0 18px 36px rgba(23, 91, 67, 0.17);
+  color: white;
+}
+
+.saldo-utama,
+.ringkasan {
+  position: relative;
+  z-index: 1;
+}
+
+.saldo-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.ikon-saldo {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.13);
+  color: #b6f0cd;
+  font-size: 15px;
+}
+
+.saldo {
+  margin: 12px 0 5px;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1.7px;
+  line-height: 1.2;
+}
+
+.saldo-negatif {
+  color: #ffd1c9;
+}
+
+.saldo-caption {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 12px;
+}
+
+.ringkasan {
+  display: grid;
+  width: min(370px, 44%);
+  gap: 12px;
+}
+
+.ringkasan-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(8px);
+}
+
+.ringkasan-ikon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 11px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.ikon-masuk {
+  background: rgba(166, 242, 192, 0.16);
+  color: #a6f2c0;
+}
+
+.ikon-keluar {
+  background: rgba(255, 208, 185, 0.15);
+  color: #ffd0b9;
+}
+
+.ringkasan-item > div {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.ringkasan-label {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 11px;
+}
+
+.ringkasan-item strong {
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dekor-saldo {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.dekor-satu {
+  top: -154px;
+  right: 24%;
+}
+
+.dekor-dua {
+  right: -118px;
+  bottom: -156px;
+  width: 300px;
+  height: 300px;
+}
+
+.grid-dashboard {
+  display: grid;
+  grid-template-columns: minmax(290px, 0.82fr) minmax(0, 1.18fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.deskripsi-kartu {
+  margin: 6px 0 20px;
+  color: #849087;
+  font-size: 12px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+label {
+  margin-top: 5px;
+  color: #405349;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 13px;
+  border: 1px solid #dfe7e1;
+  border-radius: 11px;
+  outline: none;
+  background: #fbfcfb;
+  color: #263a30;
+  font-size: 13px;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.input::placeholder {
+  color: #a8b2ac;
+}
+
+.input:focus {
+  border-color: #52a77c;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(67, 160, 112, 0.13);
+}
+
+.tombol {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 11px;
+  background: #18764f;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+form .tombol {
+  margin-top: 10px;
+}
+
+.tombol:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #116342;
+  box-shadow: 0 7px 15px rgba(24, 118, 79, 0.2);
+}
+
+.tombol:focus-visible {
+  outline: 3px solid rgba(67, 160, 112, 0.35);
+  outline-offset: 2px;
+}
+
+.tombol:disabled {
+  background: #b7c5bc;
+  cursor: not-allowed;
+}
+
+.daftar-transaksi {
+  max-height: 420px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.item-transaksi {
+  display: flex;
+  min-height: 67px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf1ee;
+}
+
+.item-transaksi:last-child {
+  border-bottom: 0;
+}
+
+.detail-transaksi {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-transaksi strong {
+  overflow: hidden;
+  color: #33483c;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.detail-transaksi small {
+  color: #8b978f;
+  font-size: 11px;
+}
+
+.nominal {
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.masuk {
+  color: #208457;
+}
+
+.keluar {
+  color: #d26b55;
+}
+
+.tombol-hapus {
+  min-height: 32px;
+  padding: 6px 10px;
+  border: 1px solid #f1e2df;
+  border-radius: 9px;
+  background: #fff8f6;
+  color: #c26451;
+  font-size: 11px;
+}
+
+.tombol-hapus:hover:not(:disabled) {
+  border-color: #e8c5bd;
+  background: #fff0ec;
+  box-shadow: none;
+}
+
+.kosong {
+  margin: 0;
+  padding: 32px 16px;
+  border: 1px dashed #dfe8e1;
+  border-radius: 14px;
+  background: #fbfcfb;
+  color: #859189;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .wadah {
+    width: min(620px, calc(100% - 36px));
+    padding-top: 32px;
+  }
+
+  .grid-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .kartu-saldo {
+    gap: 20px;
+    padding: 28px;
+  }
+
+  .ringkasan {
+    width: min(300px, 43%);
+  }
+}
+
+@media (max-width: 520px) {
+  .wadah {
+    width: calc(100% - 28px);
+    padding: 25px 0 40px;
+  }
+
+  .header {
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    font-size: 26px;
+  }
+
+  .subjudul {
+    max-width: 270px;
+    font-size: 12px;
+  }
+
+  .kartu {
+    padding: 21px;
+    border-radius: 17px;
+  }
+
+  .kartu-saldo {
+    min-height: auto;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 16px;
+    padding: 25px 22px;
+  }
+
+  .saldo {
+    font-size: clamp(29px, 9vw, 38px);
+  }
+
+  .ringkasan {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .ringkasan-item {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .ringkasan-ikon {
+    width: 29px;
+    height: 29px;
+    font-size: 16px;
+  }
+
+  .ringkasan-item strong {
+    font-size: 11px;
+  }
+
+  .grid-dashboard {
+    gap: 16px;
+  }
+
+  .item-transaksi {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nominal {
+    margin-left: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
